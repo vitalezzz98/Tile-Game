@@ -44,11 +44,11 @@ class Game:
         self.load_data()
 
     def load_data(self):
-        game_folder = path.dirname(__file__)
-        img_folder = path.join(game_folder, 'sprites')
-        map_folder = path.join(game_folder, 'maps')
-        snd_folder = path.join(game_folder, 'sound')
-        music_folder = path.join(game_folder, 'music')
+        #game_folder = path.dirname(__file__)
+        img_folder = path.join(path.dirname(__file__), 'sprites')
+        map_folder = path.join(path.dirname(__file__), 'maps')
+        snd_folder = path.join(path.dirname(__file__), 'sound')
+        music_folder = path.join(path.dirname(__file__), 'music')
         self.map = TiledMap(path.join(map_folder, 'tilemap.tmx'))
         self.map_img = self.map.make_map()
         self.map_rect = self.map_img.get_rect()
